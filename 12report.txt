@@ -1,0 +1,14 @@
+Thu Jan 18 20:03:38 PST 2024
+kobegoliman
+/Users/kobegoliman
+/bin/zsh
+/Users/kobegoliman/Code/mcb185_homework
+/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+Darwin Kobes-MacBook-Air.local 19.6.0 Darwin Kernel Version 19.6.0: Mon Aug 31 22:12:52 PDT 2020; root:xnu-6153.141.2~1/RELEASE_X86_64 x86_64
+Python 3.8.2
+/Users/kobegoliman/Code
+/Users/kobegoliman/Code/mcb185_homework
+/Users/kobegoliman/Code/mcb185_homework/.git
+/Users/kobegoliman/Code/MCB185
+/Users/kobegoliman/Code/MCB185/.git
+/Users/kobegoliman/Code/MCB185/data
