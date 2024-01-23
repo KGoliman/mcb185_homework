@@ -8,3 +8,4 @@ gunzip -c ~/Code/MCB185/data/dictionary.gz | grep "c" | grep -E "^[caonidm]{4,}$
 gunzip -c ~/Code/MCB185/data/dictionary.gz | grep "c" | grep -E "^[caonidm]{4,}$" | wc
 gunzip -c ~/Code/MCB185/data/dictionary.gz | grep "z" | grep -E "^[znorgia]{4,}$"
 gunzip -c ~/Code/MCB185/data/dictionary.gz | grep "z" | grep -E "^[znorgia]{4,}$" | wc
+gunzip -c ~/Code/MCB185/data/jaspar2024_core.transfac.gz | grep tax | cut -d ":" -f 2 | sort | uniq -c | sort -n
