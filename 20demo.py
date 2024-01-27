@@ -37,7 +37,7 @@ def midpoint(x1, y1, x2, y2):
 
 def isinteger(a):
 	if type(a) == int	: return True
-	else				: return False
+	else			: return False
 	
 def oddnumber(a):
 	if a % 2 == 1: return True
@@ -52,14 +52,14 @@ def DNAmweight(a):
 	elif	a == 'T': return 304.20
 	elif	a == "C": return 289.18
 	elif	a == "G": return 329.21
-	else			: sys.exit('error, please pick, A, T, C, or G')
+	else		: sys.exit('error, please pick, A, T, C, or G')
 
 def DNAcomplement(a):
 	if		a == 'A': return 'T'
 	elif	a == 'T': return 'A'
 	elif	a == "C": return 'G'
 	elif	a == "G": return 'C'
-	else			: sys.exit('error, please pick, A, T, C, or G')
+	else		: sys.exit('error, please pick, A, T, C, or G')
 	
 
 	
