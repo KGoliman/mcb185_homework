@@ -19,7 +19,7 @@ def KDhydrophobicity(b):
 	elif b == 'V' or b == 'v': return  4.2
 	elif b == 'W' or b == 'w': return -0.9
 	elif b == 'Y' or b == 'y': return -1.3
-	else 				: sys.exit('error: amino acid not recognized')	
+	else: sys.exit('error: amino acid not recognized')	
 
 print(KDhydrophobicity('C'))
 print(KDhydrophobicity('c'))
