@@ -11,7 +11,7 @@ def convertmphtofps(a):
 	if a <= 0: sys.exit('error: a must be greater than 0')
 	return a * 5280 / 3600
 
-def DNAconcOD260(a, b):
+def dnaconcod260(a, b):
 	if a <= 0: sys.exit('error: a must be greater than 0')
 	if b <= 0: sys.exit('error: b must be greater than 0')
 	return 50 * a * b
@@ -47,14 +47,14 @@ def validprob(a):
 	if 0 < a < 1: return True
 	else		: return False
 	
-def DNAmweight(a):
+def dnamweight(a):
 	if		a == 'A': return 313.21
 	elif	a == 'T': return 304.20
 	elif	a == "C": return 289.18
 	elif	a == "G": return 329.21
 	else		: sys.exit('error, please pick, A, T, C, or G')
 
-def DNAcomplement(a):
+def dnacomplement(a):
 	if		a == 'A': return 'T'
 	elif	a == 'T': return 'A'
 	elif	a == "C": return 'G'
@@ -65,7 +65,7 @@ def DNAcomplement(a):
 	
 greeting()
 print(convertmphtofps(60))
-print(DNAconcOD260(70, 100))
+print(dnaconcod260(70, 100))
 print(converttempctof(-40))
 print(pointdistance(2, 4, -3, -5))
 print(pythagoras(3, 4))
@@ -74,5 +74,5 @@ print(midpoint(-4, -6, 7, 8))
 print(isinteger('integer'))
 print(oddnumber(-10))
 print(validprob(0.1))
-print(DNAmweight('A'))
-print(DNAcomplement('T'))
+print(dnamweight('A'))
+print(dnacomplement('T'))

@@ -1,11 +1,11 @@
 import math
 import sys
 
-def quadratic_2intercept(a,b,c):
+def quadratic_2intercept(a, b, c):
 	n = math.pow(b, 2) - 4 * (a * c)
-	if a == 0	: sys.exit('error: this is not a quadratic function')
-	elif n < 0	: sys.exit('error: there are no real solution')
-	elif n == 0	: sys.exit('error: there are only one x-intercept')
+	if	a == 0	: sys.exit('error: this is not a quadratic function')
+	elif	n < 0	: sys.exit('error: there are no real solution')
+	elif	n == 0	: sys.exit('error: there are only one x-intercept')
 	else		: 
 		y = (-b + math.sqrt((b ** 2) - (4 * a * c))) / (2 * a)
 		z = (-b - math.sqrt((b ** 2) - (4 * a * c))) / (2 * a)

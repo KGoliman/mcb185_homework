@@ -1,7 +1,7 @@
 import math
 import sys
 
-def accuracyf1(tp,tn,fp,fn):
+def accuracyf1(tp, tn, fp, fn):
 	if	tp < 0: sys.exit('error: tp cannot be a negative number')
 	elif	tn < 0: sys.exit('error: tn cannot be a negative number')
 	elif	fp < 0: sys.exit('error: fp cannot be a negative number')

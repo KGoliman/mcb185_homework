@@ -1,7 +1,7 @@
 import math
 import sys
 
-def nucleotideshannon(a,t,c,g):
+def nucleotideshannon(a, t, c, g):
 	if a < 0: sys.exit('error: a cannot be a negative number')
 	if t < 0: sys.exit('error: t cannot be a negative number')
 	if c < 0: sys.exit('error: c cannot be a negative number')
