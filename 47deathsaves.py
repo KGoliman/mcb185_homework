@@ -5,12 +5,12 @@ def roll_d20(n):
 		d20 = random.randint(1, 20)
 		return d20
 
-limit = 1000
+lim = 1000
 print('Rolls', 'Success', 'Failure', 'Lucky20', sep = '\t')
 tot_success = 0
 tot_failure = 0
 tot_revive = 0
-for i in range(limit):
+for i in range(lim):
 	success = 0
 	failure = 0
 	revive = 0
@@ -26,7 +26,5 @@ for i in range(limit):
 		if success >= 3: tot_success += 1
 		if failure >= 3: tot_failure += 1
 		
-print(
-	limit, tot_success/limit, tot_failure/limit, tot_revive/limit, sep = '\t'
-	)
+print(lim, tot_success/lim, tot_failure/lim, tot_revive/lim, sep = '\t')
 
