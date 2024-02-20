@@ -18,8 +18,6 @@ min_d = 256 * 3
 color = None
 
 with open(colorfile) as fp:
-	results = []
-	line = []
 	for line in fp:
 		words = line.split()
 		r, g, b = words[2].split(',')
