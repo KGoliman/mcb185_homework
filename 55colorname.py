@@ -6,10 +6,7 @@ B = int(sys.argv[4])
 assert(0 <= R <= 255)
 assert(0 <= G <= 255)
 assert(0 <= B <= 255)
-target = []
-target.append(R)
-target.append(G)
-target.append(B)
+target = (R, G, B)
 
 def dtc(P, Q):
     d = 0
@@ -17,23 +14,21 @@ def dtc(P, Q):
         d += abs(p - q)
     return d
 
-def minimum(vals):
-	mini = vals[0]
-	for val in vals[1:]:
-		if val < mini: mini = val
-	return mini
+min_d = 256 * 3
+color = None
 
 with open(colorfile) as fp:
 	results = []
+	line = []
 	for line in fp:
 		words = line.split()
-		number = words[2].split(',')
-		for i in range(0, len(number)):
-			number[i] = int(number[i])
-		for i in range(len(number)):
-			result = dtc(target, number)
-			results.append(result)
-	fin_res = results[0:len(results):3]
-	min_fin_res = minimum(fin_res)
-	print(fin_res)
-	print(min_fin_res)
+		r, g, b = words[2].split(',')
+		r = int(r)
+		g = int(g)
+		b = int(b)
+		d = dtc((r, g, b), target)
+		if d < min_d:
+			min_d = d
+			color = words[0]
+
+print(color)
