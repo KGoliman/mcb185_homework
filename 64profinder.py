@@ -22,18 +22,4 @@ def pro_finder(defline, test_seq, min): # use this function again for rev_seq an
 
 for defline, seq in mcb185.read_fasta(file):
 	frame = dogma.sixframe(seq)
-	pro_finder(defline, frame, 100)		
-
-'''
-for frame in range(3):
-	for protein in pro_finder(test_seq[frame:], 2):
-		print(protein)
-
-for frame in range(3):
-	print(frame, test_seq[frame:])
-	for i in range(0, len(test_seq) - 3 + 1, 3):
-		print(test_seq[i:i+3])
-		
-seq = 'ATGCGGCTAGCTGCAGGATCTTAGTCTCCGATAC'
-# when got to *(stop), = new orf, put old to list and make new list
-'''
+	pro_finder(defline, frame, 100)
