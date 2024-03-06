@@ -39,8 +39,9 @@ with gzip.open(gffpath, 'rt') as fp:
 			beg = int(words[3])
 			end = int(words[4])
 			vals = end - beg + 1
-			lengths.sort
 			lengths.append(end - beg + 1)
+	lengths.sort()
+
 	print('type', feature)
 	print('length', len(lengths))
 	print('min', 'max', minmax(lengths))
