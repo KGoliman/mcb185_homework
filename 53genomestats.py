@@ -8,7 +8,7 @@ lengths = []
 def mean(vals):
 	total = 0
 	for val in vals: total += val
-	return round((total/len(vals)), ndigits = 0)
+	return (total/len(vals))
 
 def standev(vals):
 	total = 0
@@ -24,6 +24,14 @@ def median(vals):
 	else: med = (midx1 + midx2) / 2
 	return med
 
+def minmax(vals):
+	mini = vals[0]
+	maxi = vals[0]
+	for val in vals:
+		if val < mini: mini = val
+		if val > maxi: maxi = val
+	return mini, maxi
+	
 with gzip.open(gffpath, 'rt') as fp:
 	for line in fp:
 		words = line.split()
@@ -33,10 +41,9 @@ with gzip.open(gffpath, 'rt') as fp:
 			vals = end - beg + 1
 			lengths.sort
 			lengths.append(end - beg + 1)
-	print('type', feature, sep = '\t')
-	print('length', len(lengths), sep = '\t')
-	print('min', lengths[0], sep = '\t')
-	print('max', lengths[-1], sep = '\t')
-	print('mean', mean(lengths), sep = '\t')
-	print('standev', standev(lengths), sep = '\t')
-	print('median', median(lengths), sep = '\t')
+	print('type', feature)
+	print('length', len(lengths))
+	print('min', 'max', minmax(lengths))
+	print('mean', mean(lengths))
+	print('standev', standev(lengths))
+	print('median', median(lengths))
